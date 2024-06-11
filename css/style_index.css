@@ -1,0 +1,597 @@
+body{
+	
+	overflow:hidden;
+}
+
+/*---------------------------------------*/
+/* ده علشان الكلام اللي بيكتب اتوماتك */
+.element{
+	color: #00c3da;
+	
+}
+#About p{
+	font-size: 25px;
+	width:60%;
+	margin:auto;
+	color: #787878;
+}
+
+/*---------------------------------------*/
+/* ده علشان لم الموقع يفتح يعمل شكل حلو قبل الفتح */
+#loading{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0,1);
+	z-index: 10000;
+	display:flex
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 100px auto;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+/*---------------------------------------*/
+/* ده علشان السهم اللي علي اليمين لم اضغطط عليا يطلع ل فوق */
+#btnUp{
+	background-color: rgba(0,0,0,0.7);
+	color: #fff;
+	font-size: 30px;
+	border-radius: 100px;
+	padding: 10px;
+	border: solid 1px transparent;
+	position: fixed;
+	bottom:10px;
+	right:30px;
+	/* display: none; */
+	z-index: 2
+}
+
+/*---------------------------------------*/
+/* ده علشان السهم اللي علي الشمال لم اضغط عليا ينزل لتحت*/
+#btnUpLeft{
+	background-color: rgba(0,0,0,0.7);
+	color: #def;
+	font-size: 35px;
+	border-radius: 100px;
+	padding: 10px;
+	border: solid 1px #fff;
+	position: fixed;
+	bottom:10px;
+	left:30px;
+	/* display: none; */
+	z-index: 2
+}
+
+/*---------------------------------------*/
+/*ده علشان بوكس الالوان*/
+#sideBar{
+	position: fixed;
+	top: 50%;
+	left:-260px;
+	color: #fff;
+	z-index:10;
+}
+#colorBox{
+	background-color: rgba(0,0,0,0.7);
+	padding: 20px;
+	float: left;
+}
+.color-item{
+	/* background-color: #f00 ; */
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	cursor: pointer;
+	margin-right: 10px;
+}
+#sideBarToggle{
+	padding:10px;
+	cursor: pointer;
+	font-size:50px;
+	float: left;
+	color: rgba(0,0,0,0.7);
+}
+/*---------------------------------------*/
+
+/*navbar========================================================================================================*/
+.navbar{
+	border-bottom:1px solid #ddd ;
+	padding:0;
+	transition: all 2s;
+	/* background-color: rgba(0,0,0,0.3); */
+}
+.navbar-brand{
+	padding:0
+}
+.iconss{
+	border-left:1px solid #ddd ;
+	padding-top:20px;
+
+}
+.iconss ul {
+	
+	list-style-type: none;
+	
+}
+.iconss ul li{
+	padding-right:20px;
+	
+}
+.iconss ul li a{
+	color:#fff
+}
+
+@media screen and (max-width:991px){
+	
+	.iconss{
+		display: none;
+
+	}
+.navbar{
+	border-bottom:0px solid #ddd ;
+	padding:10
+}
+}
+/*/navbar========================================================================================================*/
+/*header========================================================================================================*/
+.slidr{
+	background-image: url('../images/bg-image-28.jpg');
+	background-size:cover;
+	background-position:center center;
+	background-attachment:fixed;
+	height:100vh
+}
+.animated { 
+    animation-duration: 1s; 
+    animation-fill-mode: both; 
+}
+.slidr .layer{
+	background-color: rgba(0,0,0,0.5);
+	height: 100%;
+}
+.caption h1{
+	font-size: 70px;
+	font-weight:900;
+	padding:10px;
+	transform: scale(1,1);
+	animation-name: scale-h1;		
+	animation-duration: 2s;
+	animation-iteration-count:1;	
+	animation-direction:alternate ;	
+	animation-delay:0.3s;	
+}
+@keyframes scale-h1{
+	0%{ 
+		transform: scale(0,0);
+		Opacity:0;
+	}
+	100%{
+		transform: scale(1,1);
+		Opacity:1;
+	}
+}
+.caption h5{
+	transform: scale(1,1);
+	
+	animation-name: scale-h5;		
+	animation-duration: 2s;
+	animation-iteration-count:1;	
+	animation-direction:alternate ;	
+	animation-delay:0.6s;	
+}
+@keyframes scale-h5{
+	0%{ 
+		transform: scale(0,0);
+		Opacity:0;
+	}
+	100%{
+		transform: scale(1,1);
+		Opacity:1;
+	}
+}
+.Read{
+	padding: 15px 30px;
+	background-color: #00c3da;
+	border:1px solid #00c3da;
+	transition:	all 1s;
+	margin: 30px 15px;
+}
+.Read:hover{
+	background-color:Transparent;
+	border:1px solid #fff;
+	transform: Translate(0px,-2px);
+}
+.Contact{
+	padding: 15px 30px;
+	background-color:Transparent;
+	border:1px solid #fff;
+	transition:	all 1s;	
+}
+.Contact:hover{
+	transform: Translate(0px,-2px);
+	background-color: #fff;
+	border:1px solid #fff;
+	color:#000
+}
+.button-headr{
+	transform: scale(1,1);
+	animation-name: scale-button1;		
+	animation-duration: 2s;
+	animation-iteration-count:1;	
+	animation-direction:alternate ;	
+	animation-delay:1s;	
+}
+@keyframes scale-button1{
+	0%{ 
+		transform: scale(0,0);
+		Opacity:0;
+	}
+	100%{
+		transform: scale(1,1);
+		Opacity:1;
+	}
+}
+
+
+
+/*========================================*/
+.slidr2{
+	background-image: url('../images/bg-image-29.jpg');
+	background-position:center center;
+	background-attachment:fixed;
+	height:100vh
+}
+.slidr2 .layer{
+	background-color: rgba(0,0,0,0.5);
+	background-size:cover;
+	height: 100%;
+}
+.caption h2{
+	font-size: 100px;
+	font-weight:900;
+	padding:10px;
+	transform: scale(1,1);
+	animation-name: scale-h2;		
+	animation-duration: 2s;
+	animation-iteration-count:1;	
+	animation-direction:alternate ;	
+	animation-delay:0.3s;	
+}
+@keyframes scale-h2{
+	0%{ 
+		transform: scale(0,0);
+		Opacity:0;
+	}
+	100%{
+		transform: scale(1,1);
+		Opacity:1;
+	}
+}
+/*/header========================================================================================================*/
+/*section-1========================================================================================================*/
+.who h6{
+	color:#1f1f1f
+}
+.who h5{
+	color:#787878
+}
+.who .Read-More{
+	padding: 15px 30px;
+	background-color:Transparent;
+	border:1px solid #787878;
+	transition:	all 1s;	
+	color:#1f1f1f
+}
+.who .Read-More:hover{
+	background-color: #1f1f1f;
+	border:1px solid #1f1f1f;
+	color:#fff
+}
+/*/section-1=======================================================================================================*/
+/*section-2========================================================================================================*/
+.Creative h2{
+	font-size:40px;
+	font-weight:900;
+	color:#1f1f1f;
+	position: relative;
+}
+.Creative h2::before{
+	content:"C";
+	font-size:80px;
+	font-weight:700;
+	bottom:-8;
+	left:49%;
+	position: absolute;
+	color: rgba(0,0,0,0.1)
+}
+.Creative h6{
+	color:#787878;
+}
+.icons{
+	display: flex;
+}
+.icon{
+	width: 30px;
+	height: 30px;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px 10px 20px 0px;
+	border-radius: 50%
+}
+.icon a{
+	color:#fff
+}
+.member{
+	position:relative;
+	overflow:hidden;
+}
+.back{
+	background-color:rgba(0, 195, 218, 0.9);
+	position:absolute;
+	top:100%;
+	left:0px;
+	width:100%;
+	height:100%;
+	display: flex;
+	justify-content:space-between;
+	flex-direction: column;
+	opacity:0;
+	transition: all 1s;
+	padding:0px 15px;
+}
+.text{
+	margin: 20px 10px;
+	color:#fff
+}
+.member:hover .back{
+	top:0%;
+	opacity:1;
+}
+/*/section-2=======================================================================================================*/
+/*section-3========================================================================================================*/
+.section-3itmes{
+	background-color:#1f1f1f;
+	opacity: .7;
+}
+.row{
+	color:#fff
+}
+.icon_text h4{
+	font-size:13px
+}
+.icon_text .chevron{
+	color:#007067
+}
+/*==========*/
+.What h2{
+	font-size:50px;
+	font-weight:700;
+	position: relative;
+}
+.What h2::before{
+	content:"w";
+	font-size:100px;
+	font-weight:700;
+	bottom:3px;
+	left:-4%;
+	position: absolute;
+	color: rgba(0,0,0,0.2);
+}
+.Research ul{
+	list-style-type: none;	
+}
+.Research ul li{
+	padding:10px 0
+}
+/*/section-3========================================================================================================*/
+/*section-4========================================================================================================*/
+.Prices{
+	background-color:#f7f7f7
+}
+.section-4Creative h2{
+	font-size:40px;
+	font-weight:900;
+	color:#1f1f1f;
+	position: relative;
+}
+.section-4Creative h2::before{
+	content:"C";
+	font-size:80px;
+	font-weight:700;
+	bottom:-8;
+	left:48%;
+	position: absolute;
+	color: rgba(0,0,0,0.09)
+}
+.contar_nambr{
+	background-color:#fff;
+	padding:40px 20px;
+	box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
+	transition:	all 0.7s;
+}
+.contar_nambr:hover{
+	box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+}
+.contar_nambr h5{
+	color:#1f1f1f;
+	font-size:14px;
+}
+.contar_nambr h4{
+	color:#1f1f1f;
+	font-size:60px;
+	position: relative;
+}
+.contar_nambr h4::before{
+	position: absolute;
+	content:"$";
+	font-size:20px;
+	top:13px;
+	left:-10
+}
+.contar_nambr .nambr29{
+	color:#00c3da;
+}
+.Gold{
+	position: relative;
+}
+.Gold::after{
+	position: absolute;
+	content:"BEST VELUE";
+	font-size:11px;
+	padding:5px 10px;
+	border-radius:50px;
+	background-color: #00c3da;
+	border:1px solid #00c3da;
+	color:#fff;
+	bottom:5px;
+	right:10px
+}
+.pGold-29{
+	position: relative;
+	bottom:12px
+}
+.contar_nambr p{
+	color:#787878
+}
+.Sign{
+	padding: 10px 20px;
+	background-color: #00c3da;
+	border:1px solid #00c3da;
+	transition:	all 0.7s;
+	font-size:13px;
+	font-weight:700;
+	box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
+}
+.Sign:hover{
+	background-color: #00c3da;
+	border:1px solid #00c3da;
+	transform: Translate(0px,-1px);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+}
+/*/section-4=======================================================================================================*/
+/*section-5========================================================================================================*/
+.slidr2-section5{
+	background-color:#f7f7f7
+}
+.slidr2-section5 h5{
+	font-size:13px;
+	color: #1f1f1f
+}
+.Marissa{
+	background-color:#fff;
+    max-width: 750px;
+	margin:auto;
+    border-radius: 10px;
+	text-align: center;
+	position:relative;
+}
+.Marissa img{
+	width: 15%;
+	position:absolute;
+	top:-20%;
+	left:43%;
+}
+.Marissa-Mayer span{
+	font-size: 12px
+}
+.Marissa-Mayer p{
+	font-size: 18px;
+	font-weight: 300;
+}
+.carousel-indicators li{
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: #888
+}
+/*/section-5========================================================================================================*/
+/*footer-6=======================================================================================================*/
+.maps iframe{
+	height:100vh
+}
+/*===============*/
+.forms h2{
+	font-size:45px;
+	font-weight:700;
+	color:#1f1f1f;
+	position: relative;
+	padding:50px 0 0 50px;
+}
+.forms h2::before{
+	content:"G";
+	font-size:80px;
+	font-weight:700;
+	top:15%;
+	left:7%;
+	position: absolute;
+	color: rgba(0,0,0,0.09)
+}
+.forms h6{
+	color:#787878;
+	padding:10px 0 0 50px;
+	font-size:18px
+}
+.label-form{
+	color: #1f1f1f;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+}
+form textarea{
+	resize:none;
+}
+.Send{
+	font-size:13px;
+	font-weight: 500;
+	padding: 15px 35px;
+	background-color:#00c3da;
+	border:0;
+	transition:	all 0.5s;
+	margin-top:10px
+}
+.Send:hover{
+	border:0;
+	background-color:#00c3da;
+	transform: Translate(0px,-2px);
+}
+/*/footer-6=======================================================================================================*/
